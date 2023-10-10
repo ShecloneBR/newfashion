@@ -4,6 +4,7 @@ const app = express()
 var port = 30000
 var caminho_index = "/workspaces/newfashion/index.html"
 var caminho_relativo = "/workspaces/newfashion/frontend/"
+var caminho_backend = "/workspaces/newfashion/backend/"
 
 app.get("/", function(req, res){
     res.sendFile(caminho_index)
@@ -24,6 +25,23 @@ app.get("/login", function(req, res){
 })
 app.get("/cadrastar", function(req, res){
     res.sendFile(caminho_relativo + "cadrastar.html")
+})
+
+app.get("/perfil", function(req, res){
+    res.sendFile(caminho_relativo + "perfil.html")
+})
+
+app.get("/config", function(req, res){
+    res.sendFile(caminho_backend + "config.html")
+})
+
+app.get("/item", function(req, res){
+    res.sendFile(caminho_relativo + "item.html")
+})
+
+app.get("/:classe/:nome/:tamanho", function(req, res){
+   
+   
 })
 
 app.listen(port, function() { console.log ("servidor rodando na porta " + port + "." ) })
