@@ -22,4 +22,4 @@ app.get("/cadrastar", function(req, res){
     res.sendFile("/../frontend/cadrastar.html")
 })
 
-app.listen(14780, function() { console.log ("servidor rodando na porta 14780.") })
+app.listen(30000, function() { console.log ("servidor rodando na porta 14780.") })
