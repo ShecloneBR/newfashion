@@ -1,43 +1,23 @@
-const item = document.getElementById('ref');
-const itemInfoContainer = document.getElementById('item-info');
+const mysql = require('mysql');
+require('dotenv').config();
 
-item.addEventListener('click', function() {
-  const item_Id = this.getAttribute('data-id');
-
-  const item_Info = buscarInformacoesNoBanco(item_Id);
-
-  const novoHTML = `
-    <DOCTYPE html>
-    <html lang="PT_BR"
-    <head>
-    
-    <title>${nome_site}</title>
-    </head>
-    <body>
-    <header>
-    <img scr="${item_Info.ref}.png" alt="foto do produto">
-    <nav>
-    <a href="/todos">Todos os modelos</a> 
-    <a href="/promocao">Promoção</a> 
-    </nav>
-    </header>
-    <h2>${item_Info.nome}</h2>
-    <p>${item_Info.descricao}</p>
-    <img src="${item_Info.imagem}" alt="${item_Info.nome}">
-    </body>
-    </html>
-  `;
-  
-  itemInfoContainer.innerHTML = novoHTML;
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: process.env.user,
+  password: process.env.senha,
+  database: 'banco_de_dados_de_teste'
 });
 
-function buscarInformacoesNoBanco(itemId) {
 
-  return {
-    nome: "Item " + itemId,
-    descricao: "Descrição do item " + item_Id,
-    imagem: "caminho/para/imagem" + item_Id + ".jpg"
-  };
-}
+connection.connect();
 
-module.exports = novoHTML
+
+connection.query('SELECT * FROM tabela', function (error, results, fields) {
+  if (error) throw error;
+
+  
+  console.log(results);
+
+ 
+  connection.end();
+});

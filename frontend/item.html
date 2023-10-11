@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Famme Fashion</title>
+</head>
+<body>
+  <header>
+    <h1>La Famme Fashion</h1>
+    <nav><a href="/todos">Todos os modelos</a></nav>
+    <nav><a href="/promocao">Promoção</a></nav>
+  </header>
+  <menu>
+    <ul>
+      <li><a href="/perfil">Perfil</a></li>
+      <li><a href="/carrinho">Seu Carrinho</a></li>
+      <li><a href="/config"> Configurações</a></li>
+    </ul>
+  </menu>
+  <div class="home">
+    <div class="destaques">
+
+    </div>
+    <div class="roupas">
+     <script>
+     const html = ` 
+      <h2>${item_nome}</h2>
+      <img src="${item_ref}.png">
+      <h3>${item_descricao}</h3>
+      <p>${item_tamanhos}</p>
+      <input type="number">
+      <div id="cidade_cep">
+      <p>${item_valor}</p>
+      <div id="comprar"></div>
+      <div id="add_carrinho"></div>
+      <img scr="logo.png" alt="logo da loja">
+     `
+     </script> 
+    </div>
+  </div>
+  <footer>Feito e Hospedado por &copy;<u>Hosn.Inc</u></footer>
+</body>
+</html>
