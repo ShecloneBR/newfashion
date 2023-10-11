@@ -39,7 +39,7 @@ app.get("/item", function(req, res){
     res.sendFile(caminho_relativo + "item.html")
 })
 
-app.get("/:classe/:nome/:tamanho", function(req, res){
+app.get("/item/:classe/:nome/:tamanho", function(req, res){
    
    
 })
