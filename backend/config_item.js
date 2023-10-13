@@ -32,9 +32,14 @@ hora = tempo.getHours()
 if (tempo > 6 && tempo < 18){
     comprar.innerHTML = 'Tenha um otimo Dia'
     addCarrinho.innerHTML = 'Otima escolha nesse belo dia'
+    comprar.style.color = '#657f07'
+    addCanhirro.style.color = '#657f07'
+    
 } else {
     comprar.innerHTML = 'Tenha uma otima noite'
-    addCanhirro.innerHTML 'Fica belo em voce ainda mais nessa noite'
+    addCanhirro.innerHTML = 'Fica belo em voce ainda mais nessa noite'
+    addCanhirro.style.color = '#81A309'
+    comprar.style.color = '#657f07'
 }
 
 
