@@ -1,9 +1,9 @@
 import { database } from "database.sql";
 
 const item = {
-    classe: "roupa"
-    nome: "vestido vermelho grande"
-    tamanho: "m"
+    classe: "roupa",
+    nome: "vestido vermelho grande",
+    tamanho: "m",
 }
 
 var classe = item.classe
