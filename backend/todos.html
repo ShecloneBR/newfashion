@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Arquivos</title>
+</head>
+<body>
+  <h1>Lista de Arquivos</h1>
+  <ul>
+    <% arquivos.forEach(function(arquivo) { %>
+      <li><%= arquivo.nome %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>
