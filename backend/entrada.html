@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <title>Entrada Itens | LFF</title>
+</head>
+<body>
+    <form method="POST" action="/adicionar-item">
+        <input id="1" type="text" name="nome" placeholder="Nome do item"/>
+        <input id="2" type="text" name="classe" placeholder="Tipo do Produto (vertisdo, calça ect)">
+        <input id="3" type= "valor" name="valor" placeholder="Valor do produto"/>
+        <input id="4" type="text" name="tamanho" placeholder="Tamanho do produto">
+        <button type="submit" id="submit">Adicionar item</button> 
+      </form>
+      <p id="erro"></p>
+      <script>
+        var input1 = document.getElementById('1')
+        var input2 = document.getElementById('2')
+        var input3 = document.getElementById('3')
+        var input4 = document.getElementById('4')
+        var button = document.getElementById('submit')
+        var erro = document.getElementById('erro')
+        button.addEventListener('click', function(){
+            if (input1 === ""){
+                erro.innerHTML = `O nome e obrigatorio`
+            } else if (input2 === "") {
+                erro.innerHTML = `A Classe e obrigatoria`
+            } else if (input3 === ""){
+                erro.innerHTML = `O valor e obrigatorio`
+            } else if (input4 === ""){
+                erro.innerHTML `O tamanho do produto e Obrigatorio.`
+            }
+        })
+      </script>
+      <small>É Obrigatorio preencher todos os campos</small>
+</body>
+</html>

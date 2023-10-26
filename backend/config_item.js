@@ -1,5 +1,3 @@
-import { database } from "database.sql";
-
 const item = {
     classe: "roupa",
     nome: "vestido vermelho grande",
