@@ -51,6 +51,9 @@ app.get("/backend/entrada_items", function(req, res){
 
 })
 
+app.get("/p/:classe/:nome/:tamanho", function(req, res){
+     res.sendFile(__dirname + "/fronted/item.html")})
+
 app.listen(port, function(){
       console.log(`servidor rodando na porta ${port}. "http://localhost/${port}".`)
 })
